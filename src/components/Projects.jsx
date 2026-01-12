@@ -5,13 +5,19 @@ import { SiMongodb, SiExpress, SiOpencv, SiMongoose } from 'react-icons/si';
 import './Projects.css';
 
 
+import hospitalImg from '../assets/Screenshot 2026-01-11 140741.png';
+import signLanguageImg from '../assets/coverofsinglanguage.png';
+import videoTubeImg from '../assets/coverofvideotube.png';
+import bookingImg from '../assets/coverofticketBooking.png';
+
+
 const projects = [
     {
         title: "Role-Based Hospital Management System",
         type: "Advanced Full Stack Project",
         status: "In Progress",
         date: "2026 – Present",
-        image: "src/assets/Screenshot 2026-01-11 140741.png",
+        image: hospitalImg,
         desc: [
             "Role-based system (Admin, Doctor, Receptionist, Patient)",
             "Backend built using MongoDB aggregation pipelines",
@@ -27,7 +33,7 @@ const projects = [
         type: "Machine Learning Project",
         status: "Completed",
         date: "December 2025",
-        image: "src/assets/Gemini_Generated_Image_9qu4zv9qu4zv9qu4.png",
+        image: signLanguageImg,
         desc: [
             "Real-time sign language recognition",
             "Live camera input and ML model integration"
@@ -40,7 +46,7 @@ const projects = [
         type: "Advanced Backend Project",
         status: "Completed",
         date: "October 2025",
-        image: "src/assets/Gemini_Generated_Image_89hvb889hvb889hv (1).png",
+        image: videoTubeImg,
         desc: [
             "Backend system inspired by video platforms",
             "Advanced MongoDB aggregation pipelines",
@@ -54,7 +60,7 @@ const projects = [
         type: "Full Stack Project",
         status: "Completed",
         date: "August 2025 (SIH 2025)",
-        image: "src/assets/Gemini_Generated_Image_61cbg61cbg61cbg6.png",
+        image: bookingImg,
         desc: [
             "Booking system for hotels, monasteries, and events",
             "Ticket generation after booking",
