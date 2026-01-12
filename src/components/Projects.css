@@ -1,0 +1,278 @@
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    max-width: 1200px;
+    /* Restored width */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.project-card-wrapper {
+    width: 100%;
+}
+
+.project-card {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    /* Slightly more gap for wide layout */
+    align-items: stretch;
+    /* Make image and text same height */
+    padding: 25px 30px;
+    /* Wider padding */
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.project-card:hover {
+    background: rgba(255, 255, 255, 0.04);
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Image Wrapper */
+.project-image-wrapper {
+    flex: 0.8;
+    /* Reduce proportion of image width to give text more space to be single-line */
+    min-height: 100%;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #111;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+/* Remove internal transform on hover to keep things stable relative to card */
+.project-card:hover .project-image-wrapper {
+    border-color: var(--primary-glow);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.05);
+}
+
+.project-img-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* Content Side */
+.project-details-content {
+    flex: 1.2;
+    /* More width for content helps reduce height by preventing wrapping */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+}
+
+.project-meta-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 5px;
+    /* Minimal margin */
+}
+
+.project-date {
+    font-size: 0.85rem;
+    color: var(--primary);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.project-status {
+    font-size: 0.65rem;
+    padding: 2px 8px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.status-completed {
+    background: rgba(46, 204, 113, 0.1);
+    color: #2ecc71;
+    border: 1px solid rgba(46, 204, 113, 0.2);
+}
+
+.status-progress {
+    background: rgba(241, 196, 15, 0.1);
+    color: #f1c40f;
+    border: 1px solid rgba(241, 196, 15, 0.2);
+}
+
+.project-title {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 5px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.project-type {
+    font-size: 0.9rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-family: monospace;
+}
+
+.project-desc-list {
+    margin-bottom: 15px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    /* Tighter lines */
+    font-size: 0.95rem;
+    list-style: none;
+    padding: 0;
+}
+
+.project-desc-list li {
+    margin-bottom: 4px;
+    /* Tighter items */
+    position: relative;
+    padding-left: 0;
+}
+
+.tech-stack-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.tech-tag {
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-muted);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.tech-tag:hover {
+    color: #fff;
+    border-color: var(--primary);
+    background: rgba(0, 240, 255, 0.05);
+}
+
+.tech-icon {
+    display: flex;
+    align-items: center;
+    color: var(--primary);
+}
+
+.project-links {
+    display: flex;
+    gap: 20px;
+}
+
+.project-links .icon-link {
+    font-size: 1.4rem;
+    color: var(--text-main);
+    transition: 0.3s;
+    opacity: 0.8;
+}
+
+.project-links .icon-link:hover {
+    color: var(--primary);
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+/* Alternate Layout for every even child (Image Right, Text Left) - Optional but good for variety */
+/* Note: Removing alternating layout for now to strictly follow "that kind of image placement" which often implies a consistent left-heavy or specific focus, but user showed one image. Standard is usually alternating.
+   Let's keep it consistent (Image Left) as per the single reference image to be safe, or alternating?
+   Reference image usually implies "Layout Style". I'll stick to Image Left for all for consistency with the "screenshot" unless instructed otherwise, or just consistent left is cleaner.
+   Actually, the screenshot shows the image prominently. I'll stick to Image Left for now.
+*/
+
+@media (max-width: 900px) {
+    .project-card {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .project-image-wrapper {
+        width: 100%;
+        height: 250px;
+        flex: none;
+    }
+
+    .project-details-content {
+        width: 100%;
+        /* Full width on mobile */
+    }
+
+    .project-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* Overlay Styles */
+.project-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+    backdrop-filter: blur(2px);
+    border-radius: inherit; /* Matches parent border radius */
+}
+
+.project-image-wrapper:hover .project-image-overlay {
+    opacity: 1;
+}
+
+.github-overlay-link {
+    color: #fff;
+    font-size: 3.5rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: scale(0.8);
+    opacity: 0;
+}
+
+.project-image-wrapper:hover .github-overlay-link {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.github-overlay-link:hover {
+    color: var(--primary, #00f0ff); /* Fallback color if var not defined */
+    transform: scale(1.1);
+}

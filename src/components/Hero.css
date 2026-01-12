@@ -1,0 +1,122 @@
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-dark);
+}
+
+/* Moving Background Glow */
+.hero-glow-follower {
+    position: absolute;
+    /* Changed to absolute so it stays within Hero section flow */
+    top: 0;
+    left: 0;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0, 240, 255, 0.15), transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+    /* Behind content */
+    /* Removed, handled by JS offset */
+    mix-blend-mode: screen;
+    filter: blur(50px);
+    will-change: transform;
+    /* Hint to browser for optimization */
+    backface-visibility: hidden;
+    /* Prevent micro-stutter */
+    transform: translateZ(0);
+    /* Force GPU acceleration */
+}
+
+.hero-content {
+    z-index: 2;
+    position: relative;
+}
+
+.greeting {
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.name {
+    font-size: 5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.role {
+    font-size: 2.5rem;
+    color: #82b1ff;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.role .highlight {
+    color: var(--text-main);
+}
+
+.hero-description {
+    font-size: 1rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    opacity: 0.8;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 12px 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-main);
+    border-radius: 4px;
+    font-weight: 500;
+    transition: var(--transition-fast);
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--text-main);
+}
+
+/* Original static glow, kept but toned down or removed if dynamic is enough. 
+   Let's keep it as a base ambient light */
+.bg-glow-static {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(112, 0, 255, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .name {
+        font-size: 3rem;
+    }
+
+    .role {
+        font-size: 1.5rem;
+    }
+
+    .hero-glow-follower {
+        display: none;
+        /* Hide expensive animation on mobile */
+    }
+}

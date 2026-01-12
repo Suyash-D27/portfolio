@@ -1,0 +1,71 @@
+.education-list {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.education-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 25px 30px;
+    background: var(--bg-card);
+    border-radius: 8px;
+    /* Minimal rounding */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    /* Slight separation */
+    transition: background 0.3s ease;
+}
+
+.education-row:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.edu-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.edu-institution {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+    /* Bold white */
+    margin-bottom: 5px;
+}
+
+.edu-degree {
+    font-size: 1rem;
+    color: var(--text-muted);
+    /* Muted gray */
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.edu-details {
+    font-size: 0.95rem;
+    color: var(--primary);
+    /* Accent color for stats/details */
+    opacity: 0.9;
+}
+
+.edu-year {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+    .education-row {
+        flex-direction: column;
+    }
+
+    .edu-year {
+        margin-top: 10px;
+        align-self: flex-start;
+        color: var(--primary);
+    }
+}

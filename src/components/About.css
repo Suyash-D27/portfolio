@@ -1,0 +1,122 @@
+.about-section {
+    background: var(--bg-dark);
+}
+
+/* Override global padding for compact fit with navbar clearance */
+.about-section.section-padding {
+    padding-top: 120px;
+    padding-bottom: 20px;
+}
+
+.section-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.subtitle {
+    color: var(--primary);
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.about-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    /* Reduced gap */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.about-icon {
+    flex-shrink: 0;
+    width: 24px;
+    padding-top: 4px;
+    color: var(--primary);
+    /* Default fallback */
+    font-size: 1.3rem;
+    /* Slightly smaller icon */
+    display: flex;
+    justify-content: center;
+}
+
+/* Individual Icon Colors */
+.icon-dev {
+    color: #00f0ff;
+    /* Cyan */
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
+}
+
+.icon-ml {
+    color: #ff0055;
+    /* Vibrant Pink/Red */
+    text-shadow: 0 0 10px rgba(255, 0, 85, 0.4);
+}
+
+.icon-edu {
+    color: #00ff88;
+    /* Neon Green */
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.4);
+}
+
+.icon-creative {
+    color: #ffaa00;
+    /* Amber/Orange */
+    text-shadow: 0 0 10px rgba(255, 170, 0, 0.4);
+}
+
+.about-text-content {
+    color: var(--text-muted);
+    font-size: 1rem;
+    /* Reduced font size */
+    line-height: 1.6;
+}
+
+.about-text-content p {
+    margin: 0;
+}
+
+.about-text-content strong {
+    color: #fff;
+    font-weight: 700;
+}
+
+.highlight-text {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.highlight {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* Response Design */
+@media (max-width: 768px) {
+    .about-item {
+        gap: 15px;
+    }
+
+    .about-icon {
+        font-size: 1.2rem;
+    }
+
+    .about-section.section-padding {
+        padding: 40px 0;
+    }
+}

@@ -1,0 +1,109 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 15px 0;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.navbar.scrolled {
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    /* Full width */
+    /* Wider than standard container for better edge alignment */
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    /* Minimal padding for full page feel */
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+/* Active link from React Router */
+.nav-links a.active-link {
+    color: var(--primary);
+}
+
+.nav-links a.active-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--primary);
+    box-shadow: 0 0 10px var(--primary);
+}
+
+/* Resume CTA Button */
+.nav-links a.resume-btn {
+    border: 1px solid var(--primary);
+    padding: 8px 20px;
+    border-radius: 4px;
+    /* Slightly rounded corners like the reference */
+    color: var(--primary);
+    transition: all 0.3s ease;
+}
+
+.nav-links a.resume-btn:hover {
+    background: rgba(0, 240, 255, 0.1);
+    /* Subtle glow on hover */
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Remove active underline for the button */
+.nav-links a.resume-btn.active-link::after {
+    display: none;
+}
+
+.nav-links a.resume-btn.active-link {
+    background: var(--primary);
+    color: #000;
+    /* Contrast text when active/filled */
+    box-shadow: 0 0 20px var(--primary-glow);
+}
+
+/* Mobile Responsive Placeholder */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        /* Implement hamburger later */
+    }
+}
