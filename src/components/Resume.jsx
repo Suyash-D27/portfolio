@@ -10,11 +10,6 @@ const Resume = () => {
     return (
         <div className="resume-page section-padding">
             <div className="container">
-                <div className="resume-actions">
-                    <button onClick={handlePrint} className="btn-primary">
-                        <FaPrint /> Print / Save as PDF
-                    </button>
-                </div>
 
                 <div className="resume-paper single-column" id="resume-content">
                     {/* Header */}
@@ -111,6 +106,12 @@ const Resume = () => {
                         </section>
                     </div>
                 </div>
+            </div>
+
+            <div className="resume-actions">
+                <button onClick={handlePrint} className="btn-primary">
+                    <FaPrint /> Print / Save as PDF
+                </button>
             </div>
         </div>
     );
