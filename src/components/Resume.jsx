@@ -31,7 +31,7 @@ const Resume = () => {
                             <h2 className="section-title">SKILLS</h2>
                             <div className="resume-content">
                                 <ul className="skills-list">
-                                    <li><strong>Programming Languages:</strong>Java (OOP), Python, JavaScript</li>
+                                    <li><strong>Programming Languages:</strong>Java (OOP), Python, JavaScript, SQL, Pandas, Numpy, Matplotlib </li>
                                     <li><strong>Frontend:</strong> React.js, HTML5, CSS3, Tailwind CSS</li>
                                     <li><strong>Backend:</strong> Node.js, Express.js,JWT Authentication</li>
                                     <li><strong>Databases:</strong> MongoDB (Aggregation Pipelines), Mongoose</li>
