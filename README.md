@@ -2,10 +2,6 @@
 
 Modern developer portfolio built with React + Vite + Framer Motion.
 
-## Updates
-- **Education**: Added JEE Mains, updated college info to "LNCT Group", and styled as resume-rows.
-- **Projects**: Converted to linear vertical timeline for better storytelling.
-
 ## Features
 - **Modern UI**: Dark premium theme with "Electric Cyan" accents.
 - **Animations**: Staggered text reveals, scroll-triggered animations.
