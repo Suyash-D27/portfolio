@@ -22,7 +22,7 @@ const Contact = () => {
                     viewport={{ once: true }}
                     transition={{ delay: 0.1 }}
                 >
-                    Currently seeking internship opportunities and open to new challenges. Happy to connect and discuss ideas, projects, or opportunities.
+                    Currently seeking internship opportunities and open to new challenges.<br /> Happy to connect and discuss ideas, projects, or opportunities.
                 </motion.p>
 
                 <motion.div
