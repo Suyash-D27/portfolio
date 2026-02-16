@@ -70,7 +70,7 @@ const skillsData = [
 
 const Skills = () => {
     return (
-        <div className="skills-section section-padding">
+        <div className="skills-section section-padding" id="skills">
             <div className="container">
                 <motion.div
                     className="section-header"

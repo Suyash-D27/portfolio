@@ -31,7 +31,7 @@ const sideWorks = [
 
 const SideWorks = () => {
     return (
-        <div className="sideworks-section section-padding">
+        <div className="sideworks-section section-padding" id="sideworks">
             <div className="container">
                 <motion.div
                     className="section-header"

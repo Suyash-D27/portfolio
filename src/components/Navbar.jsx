@@ -4,13 +4,13 @@ import { motion } from 'framer-motion';
 import './Navbar.css';
 
 const navLinks = [
-    { name: 'Home', to: '/' },
-    { name: 'About Me', to: '/about' },
-    { name: 'Skills', to: '/skills' },
-    { name: 'Projects', to: '/projects' },
-    { name: 'Side Projects', to: '/sideworks' },
-    { name: 'Education', to: '/education' },
-    { name: 'Contact', to: '/contact' },
+    { name: 'Home', to: '/#home' },
+    { name: 'About Me', to: '/#about' },
+    { name: 'Skills', to: '/#skills' },
+    { name: 'Projects', to: '/#projects' },
+    { name: 'Side Projects', to: '/#sideworks' },
+    { name: 'Education', to: '/#education' },
+    { name: 'Contact', to: '/#contact' },
     { name: 'Resume', to: '/resume' },
 ];
 
@@ -37,14 +37,33 @@ const Navbar = () => {
                 <ul className="nav-links">
                     {navLinks.map((link) => (
                         <li key={link.name}>
-                            <NavLink
-                                to={link.to}
-                                className={({ isActive }) =>
-                                    `${isActive ? "active-link" : ""} ${link.name === 'Resume' ? "resume-btn" : ""}`
-                                }
-                            >
-                                {link.name}
-                            </NavLink>
+                            {link.to.startsWith('/#') ? (
+                                <a
+                                    href={link.to}
+                                    className={link.name === 'Resume' ? "resume-btn" : ""}
+                                    onClick={(e) => {
+                                        if (window.location.pathname === '/') {
+                                            e.preventDefault();
+                                            const id = link.to.replace('/#', '');
+                                            const element = document.getElementById(id);
+                                            if (element) {
+                                                element.scrollIntoView({ behavior: 'smooth' });
+                                            }
+                                        }
+                                    }}
+                                >
+                                    {link.name}
+                                </a>
+                            ) : (
+                                <NavLink
+                                    to={link.to}
+                                    className={({ isActive }) =>
+                                        `${isActive ? "active-link" : ""} ${link.name === 'Resume' ? "resume-btn" : ""}`
+                                    }
+                                >
+                                    {link.name}
+                                </NavLink>
+                            )}
                         </li>
                     ))}
                 </ul>

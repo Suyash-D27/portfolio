@@ -152,7 +152,7 @@ const ProjectCard = ({ project, index }) => {
 
 const Projects = () => {
     return (
-        <div className="projects-section section-padding">
+        <div className="projects-section section-padding" id="projects">
             <div className="container">
                 <motion.div
                     className="section-header"

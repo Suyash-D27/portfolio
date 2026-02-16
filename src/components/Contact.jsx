@@ -5,7 +5,7 @@ import './Contact.css';
 
 const Contact = () => {
     return (
-        <div className="contact-section section-padding">
+        <div className="contact-section section-padding" id="contact">
             <div className="container center-text">
                 <motion.h2
                     className="title"

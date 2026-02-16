@@ -38,3 +38,6 @@ build
 *.sw?
 
 PLAN.md 
+walkthrough.md
+implementation_plan.md
+task.md

@@ -40,7 +40,7 @@ const educationData = [
 
 const Education = () => {
     return (
-        <div className="education-section section-padding">
+        <div className="education-section section-padding" id="education">
             <div className="container">
                 <motion.div
                     className="section-header"

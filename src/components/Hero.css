@@ -15,8 +15,8 @@
     left: 0;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(0, 240, 255, 0.15), transparent 70%);
-    border-radius: 50%;
+    background: radial-gradient(circle, rgba(5, 221, 237, 0.489), transparent 50%);
+    border-radius: 30%;
     pointer-events: none;
     z-index: 0;
     /* Behind content */

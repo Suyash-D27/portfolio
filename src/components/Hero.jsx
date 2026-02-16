@@ -24,7 +24,7 @@ const Hero = () => {
     }, [mouseX, mouseY]);
 
     return (
-        <div className="hero-section">
+        <div className="hero-section" id="home">
             {/* Background Moving Glow */}
             <motion.div
                 className="hero-glow-follower"
@@ -79,12 +79,12 @@ const Hero = () => {
                         className="cta-buttons"
                         variants={{ hidden: { y: 20, opacity: 0 }, visible: { y: 0, opacity: 1 } }}
                     >
-                        <Link to="/projects" className="btn-primary">
+                        <a href="#projects" className="btn-primary">
                             View Projects
-                        </Link>
-                        <Link to="/contact" className="btn-secondary">
+                        </a>
+                        <a href="#contact" className="btn-secondary">
                             Contact Me
-                        </Link>
+                        </a>
                     </motion.div>
                 </motion.div>
             </div>
